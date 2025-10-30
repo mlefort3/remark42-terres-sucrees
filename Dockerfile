@@ -15,13 +15,6 @@ LABEL org.opencontainers.image.authors="Umputun <umputun@gmail.com>" \
 # Working directory
 WORKDIR /srv
 
-# Optional: copy custom init or scripts (if needed)
-# COPY docker-init.sh /srv/init.sh
-# COPY backend/scripts/backup.sh /usr/local/bin/backup
-# COPY backend/scripts/restore.sh /usr/local/bin/restore
-# COPY backend/scripts/import.sh /usr/local/bin/import
-# RUN chmod +x /srv/init.sh /usr/local/bin/backup /usr/local/bin/restore /usr/local/bin/import
-
 # Expose default port
 EXPOSE 8080
 
