@@ -1,25 +1,19 @@
-# Use the official pre-built Remark42 image
-FROM umputun/remark42:latest
+FROM umputun/baseimage:app-v1.14.0
 
-# Metadata
-ARG GITHUB_SHA
-LABEL org.opencontainers.image.authors="Umputun <umputun@gmail.com>" \
-      org.opencontainers.image.description="Remark42 comment engine" \
-      org.opencontainers.image.documentation="https://remark42.com/docs/getting-started/" \
-      org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.source="https://github.com/umputun/remark42" \
-      org.opencontainers.image.title="Remark42" \
-      org.opencontainers.image.url="https://remark42.com/" \
-      org.opencontainers.image.revision="${GITHUB_SHA}"
+# Disable BoltDB completely in init
+ENV STORE_TYPE=postgres
+ENV STORE_BOLT_PATH=
+ENV AVATAR_FS_PATH=/tmp/avatars
+ENV POSTGRES_HOST=b0f99c1t25zuh9trand0-postgresql.services.clever-cloud.com
+ENV POSTGRES_PORT=50013
+ENV POSTGRES_USER=u3jguucb2cfxvcsjxne9
+ENV POSTGRES_PASSWORD=PILkY6CjcI6HaS0vs8qCJUhRTWKNrs
+ENV POSTGRES_DB=b0f99c1t25zuh9trand0
+ENV SITE=astro-blog
+ENV SECRET=eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjAzMzU3MDY2YjdkYTIxNGQyNWUxMTJmYTNkNTAxY2ExIn0.e30.WyvJnHzlZB622-4GyeDQqxm0ogGsBd_XIzeKZKK_V11YrvQ5EDImiYg0-3O4FJgSbTRxOuj2dVgvC6AWjR5ucA
+ENV REMARK_URL=https://comments.terres-sucrees.fr
+ENV AUTH_ANON=true
 
-# Working directory
-WORKDIR /srv
-
-# Expose default port
 EXPOSE 8080
 
-# Healthcheck
-HEALTHCHECK --interval=30s --timeout=3s CMD curl --fail http://localhost:8080/ping || exit 1
-
-# Default command
 CMD ["remark42", "server"]
