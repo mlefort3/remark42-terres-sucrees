@@ -81,7 +81,7 @@ RUN \
     echo "version=$version" && \
     go build -o remark42 -ldflags "-X main.revision=${version} -s -w" ./app
 
-FROM umputun/baseimage:app-v1.14.0
+FROM umputun/remark42:latest
 
 ARG GITHUB_SHA
 
