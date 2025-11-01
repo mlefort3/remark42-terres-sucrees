@@ -24,14 +24,12 @@
   --color5: #eee;
   --color44: rgba(255, 255, 255, 0.3);
   --color6: #fff;
-
   /* Replace green/turquoise background accents with purple variations */
   --color3: #e9e7f8;
   --color4: #f1f0fb;
   --color16: #e2e4f5;
   --color31: #c7c8e5;
   --color21: #f4f4fb;
-
   /* Former green/blues replaced */
   --color29: #6f6bae;
   --color9: #6f6bae;
@@ -42,7 +40,6 @@
   --color42: #e2e0fa;
   --color48: rgba(111, 107, 174, 0.6);
   --color47: rgba(111, 107, 174, 0.4);
-
   /* Reds unchanged */
   --color28: #672323;
   --color25: #9a0000;
@@ -51,12 +48,10 @@
   --color26: #ffd7d7;
   --color30: 204, 6, 6;
   --color12: 37, 158, 6;
-
   /* code-highlight */
   --chroma-bg: rgba(0, 0, 0, 0.05);
   --chroma-base: #586e75;
   --chroma-c: #7d7d7d;
-
   /* Accent colors changed to violet variants */
   --chroma-01: #6f6bae;
   --chroma-02: #5c5897;
@@ -65,43 +60,33 @@
   --chroma-05: #b1aedc;
   --chroma-06: #bf84e3;
   --chroma-07: #9b97d8;
-
   /* Named variables */
   --primary-color: 111, 107, 174;
   --primary-brighter-color: 140, 136, 199;
   --primary-darker-color: 88, 84, 139;
-
   --primary-text-color: 38, 38, 38;
   --secondary-text-color: 100, 116, 139;
   --secondary-darker-text-color: 150, 150, 150;
   --primary-background-color: 255, 255, 255;
   --black-color: 0, 0, 0;
   --white-color: 255, 255, 255;
-
   --error-color: #b91c1c;
   --error-background: #ff466f2b;
-
   --line-color: var(--color16);
   --line-brighter-color: var(--color31);
-
   --text-color: var(--black-color);
   --transparent: transparent;
 }
 
 :root .dark {
   --line-color: var(--color36);
-
   /* Swap brighter/darker for dark mode harmony */
   --primary-color: 140, 136, 199;
   --primary-brighter-color: 160, 156, 215;
   --primary-text-color: 241, 245, 249;
-
   --primary-background-color: 38, 38, 38;
-
   --secondary-text-color: 209, 213, 219;
-
   --error-color: #ffa0a0;
-
   --line-brighter-color: var(--color11);
   --text-color: var(--white-color);
 }
